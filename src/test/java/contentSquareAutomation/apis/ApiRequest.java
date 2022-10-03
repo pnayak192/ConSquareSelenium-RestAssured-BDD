@@ -32,4 +32,18 @@ public class ApiRequest extends SpecBuilder{
                 extract().
                 response();
     }
+
+    public static Response postWithPayload(String endPoint, Headers headers,
+                                HashMap<String, Object> formParams, Cookies cookies, Object payload){
+        return given(getRequestSpec()).
+                headers(headers).
+                formParams(formParams).
+                cookies(cookies).
+                when().
+                body(payload).
+                post(endPoint).
+                then().spec(getResponseSpec()).
+                extract().
+                response();
+    }
 }
