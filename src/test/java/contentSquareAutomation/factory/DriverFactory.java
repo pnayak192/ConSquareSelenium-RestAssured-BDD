@@ -13,11 +13,11 @@ public class DriverFactory {
         switch (browser) {
             case "chrome" -> {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-//                ChromeOptions options = new ChromeOptions();
-//                options.addArguments("headless");
-//                options.addArguments("disable-gpu");
-//                driver = new ChromeDriver(options);
+//                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("headless");
+                options.addArguments("disable-gpu");
+                driver = new ChromeDriver(options);
             }
             case "firefox" -> {
                 WebDriverManager.firefoxdriver().setup();
