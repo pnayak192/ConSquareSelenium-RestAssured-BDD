@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
         plugin = {"html:target/cucumber/cucumber.html"},
         glue = {"contentSquareAutomation"},
-        features = "src/test/resources/contentSquareAutomation"
+        features = "src/test/resources/features/getComments.feature"
 )
 public class MyTestNGRunnerTest extends AbstractTestNGCucumberTests {
 

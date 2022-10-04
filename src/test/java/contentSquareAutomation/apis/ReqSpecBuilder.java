@@ -7,7 +7,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-public class SpecBuilder {
+public class ReqSpecBuilder {
     public static RequestSpecification getRequestSpec(){
         return new RequestSpecBuilder().
                 setBaseUri(ConfigLoader.getInstance().getBaseUrl()).
